@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ligo Biosciences</title>
+    <link rel="icon" type="image/svg" href="./assets/black-circle.svg" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <div class="container">
+        <div class="logo">
+          <a href="#hero" style="display: flex; align-items: center; height: 100%"
+            ><img style="height: auto; width: 200px" type="png" src="./assets/image.png" alt=""
+          /></a>
+        </div>
+        <div class="nav-links">
+          <a href="#about" class="nav-btn">About</a>
+          <a href="#process" class="nav-btn">Process</a>
+          <a href="#contact" class="nav-btn">Contact</a>
+          <a href="./careers.html" class="nav-btn highlight">Careers</a>
+        </div>
+      </div>
+    </nav>
+
+    <section id="hero">
+      <div class="container hero-container">
+        <div class="hero-left" data-aos="fade-right">
+          <h1>Ligo Bio</h1>
+          <p class="subtitle"><span id="typewriter"></span><span class="typewriter-cursor">|</span></p>
+        </div>
+        <div class="hero-right" data-aos="fade-left">
+          <div class="protein-placeholder" data-tilt>
+            <p>Interactive 3D Protein Animation Placeholder</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container" data-aos="fade-up">
+        <h2>About Us</h2>
+        <p>
+          Over billions of years, nature has perfected enzymes as nature's ultimate catalysts. Yet, the vast majority of chemical reactions that power our
+          modern world don't exist in nature.<br /><br />
+
+          At Ligo Bio, we're pioneering a new era of biocatalysis by developing cutting-edge generative AI models that learn from nature's blueprint to design
+          entirely novel enzymes. Our technology is transforming the $6 trillion global chemical industry, enabling sustainable and efficient chemical processes
+          at scale.<br /><br />
+
+          We're proud to be supported by leading investors including A Capital, SV Angel, Hawktail, Liquid2, Soma Capital, Y Combinator, Paul Graham, and
+          Apoorva Mehta. Our team of four Oxford-trained AI researchers and scientists is driven by an unwavering commitment to revolutionize the chemical
+          industry through innovation, speed, and bold ambition.<br /><br />
+
+          We're building the future of industrial biotechnology - from designing enzymes that manufacture life-saving pharmaceuticals to developing biological
+          solutions that break down environmental toxins and neutralize chemical threats.<br /><br />
+
+          If you're passionate about using AI to solve some of the world's most pressing chemical challenges, we invite you to join our mission.
+        </p>
+      </div>
+    </section>
+
+    <section id="process">
+      <div class="container" data-aos="fade-up">
+        <h2>Our Process</h2>
+        <ol>
+          <li data-aos="fade-right" data-aos-delay="100">Identifying existing proteins with commercial and industrial importance.</li>
+          <li data-aos="fade-right" data-aos-delay="200">
+            Utilizing deep learning diffusion models to produce new proteins from scratch, either using existing scaffolds or not.
+          </li>
+          <li data-aos="fade-right" data-aos-delay="300">Conducting large-scale testing of hundreds of in silico designed proteins using wet lab protocols.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="backed-by">
+      <div class="container">
+        <h2 data-aos="fade-up">Backed by the Best</h2>
+        <div class="carousel-container" data-aos="fade-up" data-aos-delay="100">
+          <div class="carousel-track">
+            <div class="carousel-item">A Capital</div>
+            <div class="carousel-item">SV Angel</div>
+            <div class="carousel-item">Hawktail</div>
+            <div class="carousel-item">Liquid2</div>
+            <div class="carousel-item">Soma Capital</div>
+            <div class="carousel-item">Y Combinator</div>
+            <div class="carousel-item">Paul Graham</div>
+            <div class="carousel-item">Apoorva Mehta</div>
+            <!-- Duplicate items for infinite loop -->
+            <div class="carousel-item">A Capital</div>
+            <div class="carousel-item">SV Angel</div>
+            <div class="carousel-item">Hawktail</div>
+            <div class="carousel-item">Liquid2</div>
+            <div class="carousel-item">Soma Capital</div>
+            <div class="carousel-item">Y Combinator</div>
+            <div class="carousel-item">Paul Graham</div>
+            <div class="carousel-item">Apoorva Mehta</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="container">
+        <h2 data-aos="fade-up">Contact Us</h2>
+        <div class="contact-content" style="display: flex; gap: 40px">
+          <form id="contact-form" data-aos="fade-up" data-aos-delay="100" style="flex: 1">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+          </form>
+          <div class="map-container" data-aos="fade-up" data-aos-delay="200" style="flex: 1">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100940.17073754424!2d-122.5076402!3d37.7576793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1691972000000!5m2!1sen!2sus"
+              width="100%"
+              height="100%"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>© 2025 Ligo Bio. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // --- Initialize AOS (Animate on Scroll) ---
+        AOS.init({
+          duration: 1000, // values from 0 to 3000, with step 50ms
+          once: true, // whether animation should happen only once - while scrolling down
+          offset: 50, // offset (in px) from the original trigger point
+        });
+
+        // --- Initialize Tilt.js ---
+        // Check if VanillaTilt is defined (library loaded)
+        if (typeof VanillaTilt !== "undefined") {
+          VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
+            max: 10, // Max tilt rotation (degrees)
+            speed: 400, // Speed of the enter/exit transition
+            glare: true, // Add a glare effect
+            "max-glare": 0.3, // Glare intensity (0-1)
+          });
+        } else {
+          console.warn("Tilt.js library not loaded or initialized.");
+        }
+
+        // --- Typewriter Effect ---
+        const typewriterElement = document.getElementById("typewriter");
+        const phrases = ["Revolutionizing Biocatalysis.", "Deep Learning for Protein Design.", "Engineering the Future of Enzymes."];
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typingSpeed = 100; // Speed of typing
+        const deletingSpeed = 50; // Speed of deleting
+        const delayBetweenPhrases = 1500; // Pause before starting to delete/type next phrase
+
+        function typeWriter() {
+          const currentPhrase = phrases[phraseIndex];
+          let textToShow = "";
+
+          if (isDeleting) {
+            // Deleting characters
+            textToShow = currentPhrase.substring(0, charIndex - 1);
+            charIndex--;
+          } else {
+            // Typing characters
+            textToShow = currentPhrase.substring(0, charIndex + 1);
+            charIndex++;
+          }
+
+          typewriterElement.textContent = textToShow;
+
+          let typeDelay = typingSpeed;
+
+          if (isDeleting) {
+            typeDelay = deletingSpeed;
+          }
+
+          // Check if phrase is fully typed or deleted
+          if (!isDeleting && charIndex === currentPhrase.length) {
+            // Phrase fully typed, pause then start deleting
+            typeDelay = delayBetweenPhrases;
+            isDeleting = true;
+          } else if (isDeleting && charIndex === 0) {
+            // Phrase fully deleted, move to next phrase
+            isDeleting = false;
+            phraseIndex = (phraseIndex + 1) % phrases.length; // Loop back to start
+            typeDelay = typingSpeed;
+          }
+
+          setTimeout(typeWriter, typeDelay);
+        }
+
+        // Start the typewriter effect if the element exists
+        if (typewriterElement) {
+          setTimeout(typeWriter, typingSpeed); // Initial start delay
+        }
+
+        // --- Contact Form Mailto Logic ---
+        const contactForm = document.getElementById("contact-form");
+        if (contactForm) {
+          contactForm.addEventListener("submit", function (e) {
+            e.preventDefault(); // Prevent the default form submission
+
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+
+            const subject = encodeURIComponent(`Contact Form Submission from ${name}`);
+            const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+
+            // Construct the mailto link
+            const mailtoLink = `mailto:contact@ligo.bio?subject=${subject}&body=${body}`;
+
+            // Open the user's default email client
+            window.location.href = mailtoLink;
+          });
+        }
+
+        // --- Smooth scroll for Navbar links (CSS handles this, but JS is an alternative) ---
+        // The 'scroll-behavior: smooth;' CSS rule handles this automatically for modern browsers.
+        // If more complex logic or wider compatibility were needed, you could implement JS scrolling:
+        /*
+            document.querySelectorAll('.nav-links a, .logo a').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const href = this.getAttribute('href');
+                    // Ensure it's an internal anchor link
+                    if (href && href.startsWith('#')) {
+                         e.preventDefault();
+                         const targetId = href;
+                         const targetElement = document.querySelector(targetId);
+
+                         if (targetElement) {
+                            // Calculate offset needed for fixed navbar
+                            const navbarHeight = document.getElementById('navbar').offsetHeight;
+                            const elementPosition = targetElement.getBoundingClientRect().top;
+                            const offsetPosition = window.pageYOffset + elementPosition - navbarHeight;
+
+                            window.scrollTo({
+                                top: offsetPosition,
+                                behavior: 'smooth'
+                            });
+                         } else if (href === '#hero') { // Special case for logo linking to top
+                             window.scrollTo({ top: 0, behavior: 'smooth' });
+                         }
+                    }
+                });
+            });
+            */
+      });
+    </script>
+  </body>
+</html>
