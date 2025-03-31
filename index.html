@@ -32,18 +32,19 @@
     <section id="hero">
       <div class="container hero-container">
         <div class="hero-left" data-aos="fade-right">
-          <h1>Ligo Bio</h1>
+          <h1>Ligo <span style="font-weight: 100">biosciences</span></h1>
           <p class="subtitle"><span id="typewriter"></span><span class="typewriter-cursor">|</span></p>
         </div>
         <div class="hero-right" data-aos="fade-left">
-          <div class="css-protein-animation" data-tilt data-tilt-reverse>
+          <div id="particles-js"></div>
+          <!-- <div class="css-protein-animation" data-tilt data-tilt-reverse>
             <div class="orbit">
               <div class="atom"></div>
             </div>
             <div class="orbit" style="--orbit-speed: 10s; --orbit-size: 80%; --atom-delay: -5s">
               <div class="atom"></div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
@@ -129,12 +130,12 @@
             </div>
             <button type="submit" class="submit-btn">Send Message</button>
           </form>
-          <div class="map-container" data-aos="fade-up" data-aos-delay="200" style="flex: 1">
+          <div class="map-container" data-aos="fade-up" data-aos-delay="200" style="flex: 1; border-radius: 20px !important">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100940.17073754424!2d-122.5076402!3d37.7576793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1691972000000!5m2!1sen!2sus"
               width="100%"
               height="100%"
-              style="border: 0"
+              style="border: 0; border-radius: 10px"
               allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -150,11 +151,16 @@
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
+        // --- Initialize Particles.js ---
+        particlesJS.load("particles-js", "./particles.json", function () {
+          console.log("Particles.js loaded");
+        });
+
         // --- Initialize AOS (Animate on Scroll) ---
         AOS.init({
           duration: 1000, // values from 0 to 3000, with step 50ms
