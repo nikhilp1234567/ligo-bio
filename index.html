@@ -94,7 +94,7 @@
             <div class="carousel-item">Y Combinator</div>
             <div class="carousel-item">Paul Graham</div>
             <div class="carousel-item">Apoorva Mehta</div>
-            <!-- Duplicate items for infinite loop -->
+
             <div class="carousel-item">A Capital</div>
             <div class="carousel-item">SV Angel</div>
             <div class="carousel-item">Hawktail</div>
@@ -143,6 +143,7 @@
     <footer>
       <div class="container">
         <p>© 2025 Ligo Bio. All rights reserved.</p>
+        <small>Made By <a href="https://nikhilparmar.online/"></a>Nikhil</small>
       </div>
     </footer>
 
@@ -152,51 +153,44 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        // --- Initialize Particles.js ---
         particlesJS.load("particles-js", "./particles.json", function () {
           console.log("Particles.js loaded");
         });
 
-        // --- Initialize AOS (Animate on Scroll) ---
         AOS.init({
-          duration: 1000, // values from 0 to 3000, with step 50ms
-          once: true, // whether animation should happen only once - while scrolling down
-          offset: 50, // offset (in px) from the original trigger point
+          duration: 1000,
+          once: true,
+          offset: 50,
         });
 
-        // --- Initialize Tilt.js ---
-        // Check if VanillaTilt is defined (library loaded)
         if (typeof VanillaTilt !== "undefined") {
           VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
-            max: 10, // Max tilt rotation (degrees)
-            speed: 400, // Speed of the enter/exit transition
-            glare: true, // Add a glare effect
-            "max-glare": 0.3, // Glare intensity (0-1)
+            max: 10,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.3,
           });
         } else {
           console.warn("Tilt.js library not loaded or initialized.");
         }
 
-        // --- Typewriter Effect ---
         const typewriterElement = document.getElementById("typewriter");
         const phrases = ["Revolutionizing Biocatalysis.", "Deep Learning for Protein Design.", "Engineering the Future of Enzymes."];
         let phraseIndex = 0;
         let charIndex = 0;
         let isDeleting = false;
-        const typingSpeed = 100; // Speed of typing
-        const deletingSpeed = 50; // Speed of deleting
-        const delayBetweenPhrases = 1500; // Pause before starting to delete/type next phrase
+        const typingSpeed = 100;
+        const deletingSpeed = 50;
+        const delayBetweenPhrases = 1500;
 
         function typeWriter() {
           const currentPhrase = phrases[phraseIndex];
           let textToShow = "";
 
           if (isDeleting) {
-            // Deleting characters
             textToShow = currentPhrase.substring(0, charIndex - 1);
             charIndex--;
           } else {
-            // Typing characters
             textToShow = currentPhrase.substring(0, charIndex + 1);
             charIndex++;
           }
@@ -209,31 +203,27 @@
             typeDelay = deletingSpeed;
           }
 
-          // Check if phrase is fully typed or deleted
           if (!isDeleting && charIndex === currentPhrase.length) {
-            // Phrase fully typed, pause then start deleting
             typeDelay = delayBetweenPhrases;
             isDeleting = true;
           } else if (isDeleting && charIndex === 0) {
-            // Phrase fully deleted, move to next phrase
             isDeleting = false;
-            phraseIndex = (phraseIndex + 1) % phrases.length; // Loop back to start
+            phraseIndex = (phraseIndex + 1) % phrases.length;
             typeDelay = typingSpeed;
           }
 
           setTimeout(typeWriter, typeDelay);
         }
 
-        // Start the typewriter effect if the element exists
         if (typewriterElement) {
-          setTimeout(typeWriter, typingSpeed); // Initial start delay
+          setTimeout(typeWriter, typingSpeed);
         }
 
         // --- Contact Form Mailto Logic ---
         const contactForm = document.getElementById("contact-form");
         if (contactForm) {
           contactForm.addEventListener("submit", function (e) {
-            e.preventDefault(); // Prevent the default form submission
+            e.preventDefault();
 
             const name = document.getElementById("name").value;
             const email = document.getElementById("email").value;
@@ -242,44 +232,11 @@
             const subject = encodeURIComponent(`Contact Form Submission from ${name}`);
             const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
 
-            // Construct the mailto link
             const mailtoLink = `mailto:contact@ligo.bio?subject=${subject}&body=${body}`;
 
-            // Open the user's default email client
             window.location.href = mailtoLink;
           });
         }
-
-        // --- Smooth scroll for Navbar links (CSS handles this, but JS is an alternative) ---
-        // The 'scroll-behavior: smooth;' CSS rule handles this automatically for modern browsers.
-        // If more complex logic or wider compatibility were needed, you could implement JS scrolling:
-        /*
-            document.querySelectorAll('.nav-links a, .logo a').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    const href = this.getAttribute('href');
-                    // Ensure it's an internal anchor link
-                    if (href && href.startsWith('#')) {
-                         e.preventDefault();
-                         const targetId = href;
-                         const targetElement = document.querySelector(targetId);
-
-                         if (targetElement) {
-                            // Calculate offset needed for fixed navbar
-                            const navbarHeight = document.getElementById('navbar').offsetHeight;
-                            const elementPosition = targetElement.getBoundingClientRect().top;
-                            const offsetPosition = window.pageYOffset + elementPosition - navbarHeight;
-
-                            window.scrollTo({
-                                top: offsetPosition,
-                                behavior: 'smooth'
-                            });
-                         } else if (href === '#hero') { // Special case for logo linking to top
-                             window.scrollTo({ top: 0, behavior: 'smooth' });
-                         }
-                    }
-                });
-            });
-            */
       });
     </script>
   </body>

@@ -5,7 +5,7 @@
   --gray-light: #cccccc;
   --gray-medium: #888888;
   --gray-dark: #333333;
-  --navbar-height: 70px; /* Adjust as needed */
+  --navbar-height: 70px;
 }
 
 * {
@@ -15,7 +15,7 @@
 }
 
 html {
-  scroll-behavior: smooth; /* Enables smooth scrolling for anchor links */
+  scroll-behavior: smooth;
 }
 
 body {
@@ -23,7 +23,7 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   line-height: 1.7;
-  overflow-x: hidden; /* Prevent horizontal scroll */
+  overflow-x: hidden;
 }
 
 h1,
@@ -73,7 +73,6 @@ section {
   padding: 80px 0;
 }
 
-/* Add some top padding to sections after the fixed navbar */
 section:not(#hero) {
   /* padding-top: calc(var(--navbar-height) + 40px); */ /* Alternative if sections overlap navbar */
 }
@@ -124,7 +123,7 @@ section:not(#hero) {
   align-items: center;
   justify-content: center;
   text-align: left;
-  padding-top: var(--navbar-height); /* Offset for fixed navbar */
+  padding-top: var(--navbar-height);
   min-height: 600px;
 }
 
@@ -135,9 +134,8 @@ section:not(#hero) {
   width: 100vw;
   height: 100%;
   gap: 40px;
-
-  position: relative; /* Make the hero container a positioning context for the absolute positioned particles */
-  z-index: 1; /* Ensure hero content is above particles */
+  position: relative;
+  z-index: 1;
 }
 
 .hero-left {
@@ -161,7 +159,7 @@ section:not(#hero) {
   height: 80%;
   top: 10%;
   left: 0;
-  z-index: 0; /* Ensure particles are behind other content */
+  z-index: 0;
 }
 
 @media (max-width: 768px) {
@@ -188,14 +186,14 @@ section:not(#hero) {
 .hero-left .subtitle {
   font-size: 1.5rem;
   color: var(--gray-light);
-  min-height: 60px; /* Adjust based on font size and line height to prevent layout shifts */
+  min-height: 60px;
 }
 
 /* Typewriter cursor */
 .typewriter-cursor {
   display: inline-block;
   width: 10px;
-  height: 1.5rem; /* Match subtitle font size */
+  height: 1.5rem;
   background-color: var(--text-color);
   margin-left: 5px;
   animation: blink 0.7s infinite;
@@ -212,28 +210,10 @@ section:not(#hero) {
   }
 }
 
-/* 3D Placeholder Styling */
-.protein-placeholder {
-  width: 100%;
-  max-width: 400px; /* Adjust as needed */
-  height: 400px; /* Adjust as needed */
-  border: 2px dashed var(--gray-dark);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: var(--gray-medium);
-  background-color: #111; /* Slightly different background */
-  border-radius: 8px;
-  /* Required for Tilt.js */
-  transform-style: preserve-3d;
-  transform: perspective(1000px);
-}
-
 /* --- About Section --- */
 #about {
   background-color: oklch(0.21 0.006 285.885);
-  color: white; /* Slightly different shade */
+  color: white;
 }
 #about .container p {
   max-width: 800px;
@@ -276,43 +256,6 @@ section:not(#hero) {
   font-weight: bold;
 }
 
-/* Add this CSS to your stylesheet */
-.css-protein-animation {
-  position: relative;
-  width: 250px; /* Adjust size as needed */
-  height: 250px; /* Adjust size as needed */
-  margin: auto; /* Center it if needed */
-  /* Add perspective if you want the tilt effect to look more 3D */
-  perspective: 1000px;
-}
-
-.css-protein-animation .orbit {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: var(--orbit-size, 100%);
-  height: var(--orbit-size, 100%);
-  border: 2px solid rgba(0, 123, 255, 0.5); /* Example color */
-  border-radius: 50%;
-  transform-style: preserve-3d; /* Important for rotation */
-  animation: rotateOrbit var(--orbit-speed, 15s) linear infinite;
-  transform: translate(-50%, -50%) rotateX(70deg) rotateZ(0deg); /* Initial orientation */
-  box-sizing: border-box;
-}
-
-.css-protein-animation .atom {
-  position: absolute;
-  top: 50%;
-  left: 0; /* Start at one edge of the orbit */
-  width: 20px; /* Atom size */
-  height: 20px; /* Atom size */
-  background-color: #007bff; /* Example color */
-  border-radius: 50%;
-  transform: translate(-50%, -50%); /* Center the atom on its point */
-  animation: moveAtom var(--orbit-speed, 15s) linear infinite;
-  animation-delay: var(--atom-delay, 0s);
-}
-
 @keyframes rotateOrbit {
   from {
     transform: translate(-50%, -50%) rotateZ(0deg);
@@ -322,12 +265,9 @@ section:not(#hero) {
   }
 }
 
-/* Atom movement is implicitly handled by the orbit's rotation */
-/* If you needed separate atom movement, you'd add another animation */
-
 /* --- Jobs Section --- */
 #jobs {
-  background-color: #0a0a0a; /* Slightly different shade */
+  background-color: #0a0a0a;
   margin-top: 60px;
 }
 
@@ -386,12 +326,6 @@ section:not(#hero) {
   transform: perspective(1000px);
 }
 
-/* No hover transform if using Tilt.js, as it handles it */
-/* .job-listing:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
-        } */
-
 .job-listing h3 {
   margin-bottom: 15px;
   color: var(--text-color);
@@ -404,7 +338,7 @@ section:not(#hero) {
 }
 .job-listing strong {
   color: var(--text-color);
-  font-weight: normal; /* Adjust if needed */
+  font-weight: normal;
 }
 
 .jobs-cta {
@@ -528,33 +462,30 @@ footer {
   #navbar .container {
     flex-direction: column;
     height: auto;
-    padding-bottom: 10px; /* Add padding when stacked */
+    padding-bottom: 10px;
   }
   #navbar {
-    height: auto; /* Adjust height for stacked items */
-    position: static; /* Or adjust padding-top on body/hero */
-    /* If keeping fixed, adjust hero padding */
-    position: fixed; /* Keep fixed for demo */
+    height: auto;
+    position: static;
+    position: fixed;
     padding-bottom: 10px;
   }
   .logo {
     margin-bottom: 10px;
   }
   .nav-links a {
-    margin: 0 8px; /* Adjust spacing */
-    display: inline-block; /* Ensure they stay inline */
-    margin-bottom: 5px; /* Spacing if they wrap */
+    margin: 0 8px;
+    display: inline-block;
+    margin-bottom: 5px;
   }
-  /* Adjust padding top for subsequent sections if navbar remains fixed */
-  #hero {
-    padding-top: 120px; /* Increased padding for taller stacked navbar */
-  }
-  /* Or make body padding-top match navbar height if static */
-  /* body { padding-top: 120px; } */
 
   #hero {
-    height: auto; /* Allow height to adjust */
-    padding-top: calc(var(--navbar-height) + 90px); /* Adjust based on final fixed navbar height */
+    padding-top: 120px;
+  }
+
+  #hero {
+    height: auto;
+    padding-top: calc(var(--navbar-height) + 90px);
     padding-bottom: 60px;
     text-align: center;
   }
@@ -578,7 +509,7 @@ footer {
   }
 
   .job-listings {
-    grid-template-columns: 1fr; /* Stack jobs on smaller screens */
+    grid-template-columns: 1fr;
   }
 }
 
