@@ -164,6 +164,23 @@ section:not(#hero) {
   z-index: 0; /* Ensure particles are behind other content */
 }
 
+@media (max-width: 768px) {
+  .hero-right,
+  #particles-js {
+    display: none;
+  }
+  .contact-content {
+    flex-direction: column;
+    height: 100vh;
+  }
+  #contact-form {
+    width: 100%;
+  }
+  footer {
+    margin-top: 0 !important;
+  }
+}
+
 .hero-left h1 {
   margin-bottom: 15px;
 }
